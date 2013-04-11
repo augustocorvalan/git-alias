@@ -1,0 +1,1 @@
+Some git aliases I find helpful and decrease the number of times mistyping status actually affects me. 
