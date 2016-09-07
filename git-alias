@@ -1,22 +1,22 @@
-alias.ls log --pretty=oneline -n 5 --graph
-alias.s status -s
-alias.stauts status
-alias.statsu status
-alias.dif !git diff-index --quiet HEAD -- || clear; git diff --patch-with-stat
-alias.difn !d() { git diff --patch-with-stat HEAD~$1; }; git diff-index --quiet HEAD -- || clear; d
-alias.p !git pull; git submodule foreach git pull origin master
-alias.c clone --recursive
-alias.ca !git add -A && git commit -av
-alias.ch checkout
-alias.go checkout -B
-alias.tags tag -l
-alias.branches branch -a
-alias.remotes remote -v
-alias.credit !f() { git commit --amend --author "$1 <$2>" -C HEAD; }; f
-alias.reb !r() { git rebase -i HEAD~$1; }; r
-alias.undopush push -f origin HEAD^:master
-alias.alias config --get-regexp alias
-alias.alias-edit config --global --edit
-alias.dev-pull pull --rebase origin develop
-alias.amend commit --amend -m
-alias.rbranch for-each-ref --count=30 --sort=-committerdate refs/heads/ --format='%(refname:short)'
+ls = log --pretty=oneline -n 5 --graph
+s = status -s
+stauts = status
+statsu = status
+dif = !git diff-index --quiet HEAD -- || clear; git diff --patch-with-stat
+difn = !d() { git diff --patch-with-stat HEAD~$1; }; git diff-index --quiet HEAD -- || clear; d
+p = !git pull; git submodule foreach git pull origin master
+c = clone --recursive
+ca = !git add -A && git commit -av
+ch = checkout
+go = checkout -B
+tags = tag -l
+branches = branch -a
+remotes = remote -v
+credit = !f() { git commit --amend --author "$1 <$2>" -C HEAD; }; f
+reb = !r() { git rebase -i HEAD~$1; }; r
+undopush = push -f origin HEAD^:master
+alias = config --get-regexp alias
+alias-edit = config --global --edit
+dev-pull = pull --rebase origin develop
+amend = commit --amend -m
+rbranch = for-each-ref --count=30 --sort=-committerdate refs/heads/ --format='%(refname:short)'
